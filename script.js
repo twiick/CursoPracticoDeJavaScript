@@ -11,11 +11,15 @@ let textoResultado=document.getElementById("resultado");
 let valor1=0;
 let valor2=0;
 
+input1.addEventListener("change", recibirValor);
+input2.addEventListener("change", recibirValor);
+btn.addEventListener("click", btnOnClick);
+
 function recibirValor(input){
-    if(input=="input1"){
+    if(input.target.id=="calculo1"){
         valor1=parseInt(input1.value);
     }
-    if(input=="input2"){
+    if(input.target.id=="calculo2"){
         valor2=parseInt(input2.value);
     }
 }
